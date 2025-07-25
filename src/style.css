@@ -1,3 +1,123 @@
+/* 전체 페이지 래퍼 */
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  /* background: #fff; */
+  display: flex;
+  flex-direction: column;
+}
+/* 상단바 스타일 */
+.topbar {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
+  padding-bottom: 0;
+}
+.topbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 0 24px;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #5a5a5a;
+  letter-spacing: -2px;
+  margin-right: 16px;
+}
+.store-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 4px 16px;
+  font-size: 1rem;
+  margin-right: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.search-bar {
+  flex: 1;
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 38px;
+  max-width: 480px;
+}
+.search-bar input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  padding: 8px 0;
+}
+.cart-btn {
+  background: none;
+  border: none;
+  position: relative;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.cart-icon {
+  font-size: 1.7rem;
+  color: #222;
+}
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #868686;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.category-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 24px 0 24px;
+  font-size: 1.05rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: none;
+}
+/* 본문이 상단바와 자연스럽게 이어지도록 마진 조정 */
+.product-container {
+  margin-top: 0;
+}
+.category-bar .category {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.category-bar .category.selected {
+  color: #7c3a14;
+  font-weight: 700;
+}
+.category-bar img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
