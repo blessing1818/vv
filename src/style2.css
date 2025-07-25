@@ -1,0 +1,268 @@
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 15px 15px 100px 15px;
+  background-color: #f5efec; /* 연한 회색 배경 */
+  color: #333333;
+}
+
+.product-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #ffffff; /* 흰색 본문 배경 */
+  border-radius: 12px; /* 둥근 모서리 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-image {
+  width: 180px; /* 이미지 크기 축소 */
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+}
+
+h1 {
+  font-size: 1.5em; /* 폰트 크기 더 축소 */
+  margin-top: 0px;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.product-subtitle {
+  font-size: 0.8em; /* 작은 글씨 */
+  color: #888888; /* 회색 */
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.product-tagline {
+  font-size: 0.9em;
+  color: #555555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.price {
+  font-size: 1.4em; /* 폰트 크기 축소 */
+  font-weight: bold;
+  color: #0fb3ff;
+  margin-bottom: 15px;
+  text-align: left;
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Nanum Gothic",
+    sans-serif;
+}
+
+h2 {
+  font-size: 1.2em; /* 폰트 크기 축소 */
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #2a2a2a;
+}
+
+.product-description p,
+.product-info ul {
+  font-size: 0.9em; /* 폰트 크기 축소 */
+  color: #555555;
+}
+
+.product-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-info li {
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-info li strong {
+  display: inline-block;
+  width: 100px; /* 너비 축소 */
+  color: #333333;
+  font-weight: 500; /* 굵기 조정 */
+}
+
+.tasting-notes {
+  margin-top: 20px;
+}
+
+.tasting-notes p {
+  font-size: 0.9em;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.korean-translation {
+  font-size: 0.8em;
+  color: #aaaaaa;
+  display: block; /* 새 줄에 표시 */
+  margin-top: 2px; /* 영어 텍스트와의 간격 */
+}
+
+.korean-translation-light {
+  font-size: 0.8em;
+  color: #aaaaaa; /* 연한 회색 */
+  display: block; /* 새 줄에 표시 */
+  margin-top: 2px; /* 영어 텍스트와의 간격 */
+}
+
+.add-to-cart-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0fb3ff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #008cff;
+}
+
+.brand-story {
+  display: flex;
+  flex-direction: column; /* 세로 정렬로 변경 */
+  gap: 15px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.brand-image {
+  width: 100%; /* 너비를 꽉 채우도록 변경 */
+  height: auto;
+  border-radius: 8px;
+}
+
+.brand-text {
+  flex: 1;
+  color: #444444;
+  font-size: 0.9em; /* 폰트 크기 축소 */
+}
+
+.drinking-method-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 0px;
+}
+
+.drinking-method-layout ul {
+  flex: 1;
+  margin: 0;
+  padding: 20px;
+}
+
+.drinking-method-image {
+  width: 120px; /* 이미지 크기 축소 */
+  height: auto;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+.pairing-items-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.pairing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pairing-image {
+  width: 80px; /* 이미지 크기 조정 */
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+}
+
+.product-description-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-description-image {
+  width: 250px; /* 이미지 크기 조정 */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px; /* 이미지와 텍스트 사이 간격 */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  margin-bottom: 10px; /* Keep some space below the rating */
+}
+
+.star-rating {
+  text-align: left;
+  margin-bottom: 0; /* Remove bottom margin as flex container handles spacing */
+  white-space: nowrap; /* Prevent stars from wrapping to the next line */
+}
+
+.star {
+  font-size: 1.2em;
+  color: #ccc; /* 비어있는 별 색상 */
+  margin-right: -4px; /* 별 사이 간격 더 줄이기 */
+  display: inline-block; /* Ensure stars are treated as blocks for consistent spacing */
+}
+
+.star.filled {
+  color: #ffc107; /* 채워진 별 색상 (노란색) */
+}
+
+.star.half-filled {
+  position: relative;
+  color: #ffc107; /* 채워진 별 색상 (노란색) */
+}
+
+.star.half-filled::before {
+  content: "\2605"; /* 유니코드 별 문자 */
+  position: absolute;
+  left: 0;
+  width: 50%; /* 절반만 채우기 */
+  overflow: hidden;
+  color: #ccc; /* 비어있는 별 색상 */
+}
+
+.rating-text {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-left: 5px;
+}
+
+.review-count {
+  font-size: 0.9em;
+  color: #888888; /* 연한 회색 */
+  margin-left: 5px;
+}
