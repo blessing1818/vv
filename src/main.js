@@ -1,3 +1,4 @@
+import "./style.css";
 document.addEventListener("DOMContentLoaded", function () {
   const regionButtons = document.querySelectorAll(".region-btn");
   const pickupStoreLabel = document.querySelector(".pickup-store-label");

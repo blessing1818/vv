@@ -58,7 +58,7 @@ h1 {
 .price {
   font-size: 1.4em; /* 폰트 크기 축소 */
   font-weight: bold;
-  color: #0fb3ff;
+  color: #fd6500;
   margin-bottom: 15px;
   text-align: left;
   font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Nanum Gothic",
@@ -128,7 +128,7 @@ h2 {
   font-size: 1.1em;
   font-weight: bold;
   color: #ffffff;
-  background-color: #0fb3ff;
+  background-color: #ff7b0f;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -139,7 +139,7 @@ h2 {
 }
 
 .add-to-cart-btn:hover {
-  background-color: #008cff;
+  background-color: #ec5711;
 }
 
 .brand-story {
