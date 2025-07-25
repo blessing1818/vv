@@ -3,5 +3,3 @@ if (Math.random() < 0.5) {
 } else {
   window.location.href = "/src/index3.html";
 }
-
- 
