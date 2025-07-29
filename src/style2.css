@@ -1,3 +1,78 @@
+/* 상단바 스타일 */
+.topbar {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03);
+  padding-bottom: 0;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 15px;
+  padding: 15px 15px 0 15px;
+}
+.topbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 0 0;
+}
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fd6500;
+  letter-spacing: -2px;
+  margin-right: 16px;
+}
+.cart-btn {
+  background: none;
+  border: none;
+  position: relative;
+  margin-left: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+.cart-icon img {
+  height: 24px;
+  vertical-align: middle;
+}
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #fd6500;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.category-bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 0 0 0;
+  font-size: 1.05rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-bottom: none;
+}
+.category-bar .category {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.category-bar .category.selected {
+  color: #fd6500;
+  font-weight: 700;
+}
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
@@ -10,7 +85,7 @@ body {
 .product-container {
   max-width: 480px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   background-color: #ffffff; /* 흰색 본문 배경 */
   border-radius: 12px; /* 둥근 모서리 */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
