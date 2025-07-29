@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추천 상품 리스트</title>
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="topbar">
+        <div class="topbar-main">
+          <span class="logo">마셔</span>
+          <button class="cart-btn">
+            <span class="cart-icon"
+              ><img
+                src="/cart.png"
+                alt="카트"
+                style="height: 24px; vertical-align: middle"
+            /></span>
+            <span class="cart-badge">0</span>
+          </button>
+        </div>
+        <div class="category-bar">
+          <span class="category selected">추천</span>
+          <span class="category">해외직구</span>
+          <span class="category">위스키</span>
+          <span class="category">와인</span>
+          <span class="category">사케</span>
+          <span class="category">리큐르</span>
+          <span class="category">기타 주류</span>
+        </div>
+      </div>
+      <h1 style="margin-top: 30px">추천 상품</h1>
+      <div
+        class="product-list"
+        style="
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+        "
+      >
+        <!-- 예시 상품 카드 -->
+        <div
+          class="product-card"
+          style="
+            max-width: 480px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+          "
+        >
+          <img
+            src="/unnamed.jpg"
+            alt="맥켈란 12년 더블 캐스크"
+            class="product-image"
+          />
+          <div class="product-info" style="flex: 1">
+            <h2 style="font-size: 1.2em; margin: 0 0 5px 0; color: #1a1a1a">
+              맥켈란 12년 더블 캐스크
+            </h2>
+            <p
+              class="price"
+              style="
+                font-size: 1.1em;
+                font-weight: bold;
+                color: #fd6500;
+                margin-bottom: 10px;
+              "
+            >
+              ₩129,000
+            </p>
+            <button
+              class="view-detail-btn"
+              onclick="location.href='index2.html'"
+              style="
+                width: 100%;
+                padding: 8px;
+                font-size: 1em;
+                font-weight: bold;
+                color: #fff;
+                background-color: #ff7b0f;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+            >
+              상세보기
+            </button>
+          </div>
+        </div>
+        <div
+          class="product-card"
+          style="
+            max-width: 480px;
+            width: 100%;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+          "
+        >
+          <img src="/ma.jpg" alt="글렌피딕 15년" class="product-image" />
+          <div class="product-info" style="flex: 1">
+            <h2 style="font-size: 1.2em; margin: 0 0 5px 0; color: #1a1a1a">
+              글렌피딕 15년
+            </h2>
+            <p
+              class="price"
+              style="
+                font-size: 1.1em;
+                font-weight: bold;
+                color: #fd6500;
+                margin-bottom: 10px;
+              "
+            >
+              ₩115,000
+            </p>
+            <button
+              class="view-detail-btn"
+              style="
+                width: 100%;
+                padding: 8px;
+                font-size: 1em;
+                font-weight: bold;
+                color: #fff;
+                background-color: #ff7b0f;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+            >
+              상세보기
+            </button>
+          </div>
+        </div>
+        <!-- 추가 상품은 디자인 설명 후 반영 -->
+      </div>
+    </div>
+    <script type="module" src="./firebase-cart-login.js"></script>
+  </body>
+</html>

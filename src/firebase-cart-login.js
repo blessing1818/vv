@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         await updateDoc(orderRef, {
           purchaseCount: increment(1),
         });
-        alert("주문이 완료되었습니다! (구매 수량이 1 증가)");
+        alert("주문이 완료되었습니다!");
       } catch (error) {
         alert("주문 실패: " + error.message);
       }
