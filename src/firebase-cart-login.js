@@ -1,19 +1,3 @@
-import "./style.css";
-document.addEventListener("DOMContentLoaded", function () {
-  const regionButtons = document.querySelectorAll(".region-btn");
-  const pickupStoreLabel = document.querySelector(".pickup-store-label");
-
-  regionButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      // 모든 버튼에서 'selected' 클래스 제거
-      regionButtons.forEach((btn) => btn.classList.remove("selected"));
-
-      // 클릭된 버튼에 'selected' 클래스 추가
-      this.classList.add("selected");
-    });
-  });
-});
-
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
@@ -44,6 +28,36 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) => {
           alert("로그인 실패: " + error.message);
         });
+    });
+  }
+});
+
+import { getFirestore, doc, updateDoc, increment } from "firebase/firestore";
+
+// ...existing code...
+
+const db = getFirestore();
+
+document.addEventListener("DOMContentLoaded", () => {
+  // ...existing code...
+
+  const orderBtn = document.querySelector(".add-to-cart-btn");
+  if (orderBtn) {
+    orderBtn.addEventListener("click", async () => {
+      // 페이지별로 Firestore 컬렉션 이름 분기
+      let collectionName = "orders";
+      if (window.location.pathname.includes("index3.html")) {
+        collectionName = "orders2";
+      }
+      const orderRef = doc(db, collectionName, "pickup");
+      try {
+        await updateDoc(orderRef, {
+          purchaseCount: increment(1),
+        });
+        alert("주문이 완료되었습니다! (구매 수량이 1 증가)");
+      } catch (error) {
+        alert("주문 실패: " + error.message);
+      }
     });
   }
 });
