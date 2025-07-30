@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (e) {
         // Firestore 오류 무시하고 이동
       }
-      window.location.href = "/src/recommend2.html";
+      window.location.href = "./recommend2.html";
     });
   }
 
