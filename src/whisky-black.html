@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위스키 상품 리스트 (검정버전)</title>
+    <link rel="stylesheet" href="./style-black.css" />
+    <link rel="stylesheet" href="./whisky-black.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="topbar">
+        <div class="topbar-main">
+          <span class="logo">마셔</span>
+          <button class="cart-btn">
+            <span class="cart-icon"
+              ><img
+                src="/cart.png"
+                alt="카트"
+                style="height: 24px; vertical-align: middle"
+            /></span>
+            <span class="cart-badge">0</span>
+          </button>
+        </div>
+        <div class="category-bar">
+          <span class="category" id="go-recommend">추천</span>
+          <span class="category">해외직구</span>
+          <span class="category selected whisky" id="go-whisky">위스키</span>
+          <span class="category">와인</span>
+          <span class="category">사케</span>
+          <span class="category">리큐르</span>
+          <span class="category">기타 주류</span>
+        </div>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <img
+            src="/w1.jpg"
+            alt="맥켈란 12년 더블 캐스크"
+            class="product-image"
+            id="img-macallan"
+          />
+          <div class="product-info-left">
+            <div class="product-title">맥켈란 12년 더블 캐스크</div>
+            <div class="product-price">190,000원</div>
+            <div class="product-rating">
+              <span class="star">★</span><span class="rating-value">5.0</span
+              ><span class="rating-count">(49)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/w2.jpg"
+            alt="글렌피딕 15년"
+            class="product-image"
+            id="img-glenfiddich"
+          />
+          <div class="product-info-left">
+            <div class="product-title">글렌피딕 15년</div>
+            <div class="product-price">150,000원</div>
+            <div class="product-rating">
+              <span class="star">★</span><span class="rating-value">4.8</span
+              ><span class="rating-count">(32)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/w3.jpg"
+            alt="발베니 14년 카리비안 캐스크"
+            class="product-image"
+            id="img-balvenie"
+          />
+          <div class="product-info-left">
+            <div class="product-title">발베니 14년 카리비안 캐스크</div>
+            <div class="product-price">175,000원</div>
+            <div class="product-rating">
+              <span class="star">★</span><span class="rating-value">4.9</span
+              ><span class="rating-count">(41)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/w4.jpg"
+            alt="아벨라워 12년"
+            class="product-image"
+            id="img-aberlour"
+          />
+          <div class="product-info-left">
+            <div class="product-title">아벨라워 12년</div>
+            <div class="product-price">140,000원</div>
+            <div class="product-rating">
+              <span class="star">★</span><span class="rating-value">4.7</span
+              ><span class="rating-count">(27)</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            src="/w5.jpg"
+            alt="라가불린 16년"
+            class="product-image"
+            id="img-lagavulin"
+          />
+          <div class="product-info-left">
+            <div class="product-title">라가불린 16년</div>
+            <div class="product-price">185,000원</div>
+            <div class="product-rating">
+              <span class="star">★</span><span class="rating-value">4.9</span
+              ><span class="rating-count">(35)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./firebase-cart-login.js"></script>
+    <script type="module" src="./whisky-black.js"></script>
+    <script>
+      // 각 상품 이미지 클릭 시 상세페이지 이동
+      document.getElementById("img-macallan").onclick = function () {
+        window.location.href = "index2.html";
+      };
+      document.getElementById("img-glenfiddich").onclick = function () {
+        window.location.href = "#"; // 상세페이지 링크로 변경
+      };
+      document.getElementById("img-balvenie").onclick = function () {
+        window.location.href = "#"; // 상세페이지 링크로 변경
+      };
+      document.getElementById("img-aberlour").onclick = function () {
+        window.location.href = "#"; // 상세페이지 링크로 변경
+      };
+      document.getElementById("img-lagavulin").onclick = function () {
+        window.location.href = "#"; // 상세페이지 링크로 변경
+      };
+    </script>
+  </body>
+</html>

@@ -13,37 +13,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { getAnalytics } from "firebase/analytics";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyAJIgMQ9jLPLrhuld_r9E91Uw_R9VpNEwQ",
-  authDomain: "whiskey-c8cb8.firebaseapp.com",
-  projectId: "whiskey-c8cb8",
-  storageBucket: "whiskey-c8cb8.firebasestorage.app",
-  messagingSenderId: "407306260376",
-  appId: "1:407306260376:web:05ca0d5768ef9cfb7fe5ed",
-  measurementId: "G-GHRLE2TSK9",
-};
-
-const app = initializeApp(firebaseConfig);
-getAnalytics(app);
-const auth = getAuth(app);
-
-document.addEventListener("DOMContentLoaded", () => {
-  const cartBtn = document.querySelector(".cart-btn");
-  if (cartBtn) {
-    cartBtn.addEventListener("click", () => {
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          alert("로그인 성공: " + result.user.displayName);
-        })
-        .catch((error) => {
-          alert("로그인 실패: " + error.message);
-        });
-    });
-  }
-});

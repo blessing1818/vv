@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>맥켈란 12년 더블 캐스크</title>
+    <link rel="stylesheet" href="./style-all.css" />
   </head>
   <body>
     <div class="page-wrapper">
@@ -23,9 +24,11 @@
             </button>
           </div>
           <div class="category-bar">
-            <span class="category selected">추천</span>
+            <span class="category selected" id="category-recommend">추천</span>
             <span class="category">해외직구</span>
-            <span class="category">위스키</span>
+            <span class="category selected whisky" id="category-whisky"
+              >위스키</span
+            >
             <span class="category">와인</span>
             <span class="category">사케</span>
             <span class="category">리큐르</span>
@@ -34,16 +37,15 @@
         </div>
         <!-- 상단바 끝 -->
         <div style="width: 100%; display: flex; justify-content: center">
-          <img
-            src="/unnamed.jpg"
-            alt="맥켈란 12년 더블 캐스크"
-            class="product-image"
-          />
+          <div class="product-image-center">
+            <img
+              src="/unnamed.jpg"
+              alt="맥켈란 12년 더블 캐스크"
+              class="product-image"
+            />
+          </div>
         </div>
-        <div
-          class="product-details"
-          style="text-align: left; align-items: flex-start"
-        >
+        <div class="product-details">
           <p class="product-tagline">위스키계의 롤스로이드</p>
           <p class="product-subtitle">Macallan 12yo Double Cask</p>
           <h1>맥켈란 12년 더블 캐스크</h1>
@@ -65,13 +67,7 @@
             <img
               src="/wpwp.jpg"
               alt="맥켈란 품격 이미지"
-              style="
-                width: 100%;
-                max-width: 500px;
-                display: block;
-                margin: 0 auto 12px auto;
-                border-radius: 8px;
-              "
+              class="product-desc-image"
             />
             <p>
               맥켈란 더블 캐스크 12년은 아메리칸 및 유러피안 셰리 오크통의
@@ -96,12 +92,6 @@
               src="/macallan-story.jpg"
               alt="맥켈란 증류소"
               class="brand-image"
-              style="
-                display: block;
-                margin: 0 auto 16px auto;
-                max-width: 100%;
-                border-radius: 8px;
-              "
             />
             <p>
               맥켈란은 1824년 알렉산더 레이드가 스코틀랜드 스페이사이드 지역에
@@ -124,6 +114,16 @@
       </div>
       <script type="module" src="./main.js"></script>
       <script type="module" src="./firebase-cart-login.js"></script>
+      <script type="module" src="./main-black.js"></script>
+      <script>
+        // 추천/위스키 클릭 시 페이지 이동
+        document.getElementById("category-recommend").onclick = function () {
+          window.location.href = "recommend-black.html";
+        };
+        document.getElementById("category-whisky").onclick = function () {
+          window.location.href = "whisky-black.html";
+        };
+      </script>
     </div>
   </body>
 </html>

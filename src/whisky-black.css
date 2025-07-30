@@ -1,0 +1,156 @@
+.product-card {
+  position: relative;
+}
+.product-card .product-image {
+  display: block;
+  margin: 0 auto;
+}
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-card .product-image {
+  display: block;
+  margin: 0;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-info-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  width: 100%;
+  padding-left: 2px;
+}
+.product-title {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #222;
+  text-align: left;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+  margin-top: 10px;
+}
+.product-price {
+  font-size: 1em;
+  color: #5a5a5a;
+  font-weight: 500;
+  margin-bottom: 2px;
+  margin-top: 2px;
+  text-align: left;
+}
+.product-card .product-rating {
+  display: flex;
+  align-items: center;
+  font-size: 0.95em;
+  color: #f5a623;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.product-card .product-rating .star {
+  color: #f5a623;
+  margin-right: 2px;
+}
+.product-card .product-rating .rating-value {
+  color: #222;
+  font-weight: bold;
+  margin-right: 2px;
+}
+.product-card .product-rating .rating-count {
+  color: #888;
+}
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  justify-items: center;
+}
+.product-card h3 {
+  font-size: 0.95em;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+/* 위스키 카테고리 텍스트 주황색 */
+.category.whisky {
+  color: #7c3a14 !important;
+  font-weight: 700;
+}
+/* 추천(선택된) 카테고리 텍스트 검정 */
+.category.selected {
+  color: #222;
+  font-weight: normal;
+}
+/* 카테고리 호버 시 글자색만 변경 */
+.category-bar .category:not(.selected):hover {
+  color: #fd6500;
+  background: none;
+}
+/* 추천 상품 리스트 페이지 전용 스타일 */
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  justify-items: center;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  width: 100%;
+  max-width: 210px;
+  min-width: 0;
+}
+.product-card .product-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0;
+}
+.product-card .price {
+  font-size: 1.05em;
+  color: #888;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 0px;
+  margin: 0%;
+}
+.product-card .view-detail-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.product-card .view-detail-btn:hover {
+  background: #111;
+}
+
+.recommend-title {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  text-align: left;
+  color: #333;
+  font-weight: 700;
+  padding-left: 2px;
+}

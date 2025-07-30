@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추천 상품 리스트 (검정버전)</title>
+    <link rel="stylesheet" href="./style-all.css" />
+    <link rel="stylesheet" href="./recommend-black.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="topbar">
+        <div class="topbar-main">
+          <span class="logo">마셔</span>
+          <button class="cart-btn">
+            <span class="cart-icon"
+              ><img
+                src="/cart.png"
+                alt="카트"
+                style="height: 24px; vertical-align: middle"
+            /></span>
+            <span class="cart-badge">0</span>
+          </button>
+        </div>
+        <div class="category-bar">
+          <span class="category selected" id="go-recommend">추천</span>
+          <span class="category">해외직구</span>
+          <span class="category whisky" id="go-whisky">위스키</span>
+          <span class="category">와인</span>
+          <span class="category">사케</span>
+          <span class="category">리큐르</span>
+          <span class="category">기타 주류</span>
+        </div>
+      </div>
+      <div class="ad-banner">
+        <img src="/dd.jpg" alt="광고 이미지" class="ad-image" />
+      </div>
+      <h2 class="recommend-title recommend-today">고객 맞춤 추천</h2>
+      <div class="product-list-horizontal">
+        <!-- 상품 1 -->
+        <div class="product-card product-card-custom">
+          <img
+            src="/w1.jpg"
+            alt="넵마이 보드카 500ml (베트남)"
+            class="product-image product-image-square"
+          />
+          <h3 class="product-title">넵마이 보드카 500ml (베트남)</h3>
+          <div class="product-origin-price">19,000원</div>
+          <div class="product-sale-price">
+            <span class="product-sale">31%</span>
+            <span class="product-price">13,200원</span>
+          </div>
+          <div class="product-rating">
+            <span class="star">★</span>
+            <span class="score">5.0</span>
+            <span class="review-count">(49)</span>
+          </div>
+        </div>
+        <!-- 상품 2 -->
+        <div class="product-card product-card-custom">
+          <img
+            src="/w2.jpg"
+            alt="예시 상품명"
+            class="product-image product-image-square"
+          />
+          <h3 class="product-title">추사 40도 200ml (오크통 숙성)</h3>
+          <div class="product-origin-price">30,000원</div>
+          <div class="product-sale-price">
+            <span class="product-sale">5%</span>
+            <span class="product-price">28,500원</span>
+          </div>
+          <div class="product-rating">
+            <span class="star">★</span>
+            <span class="score">5.0</span>
+            <span class="review-count">(3)</span>
+          </div>
+        </div>
+        <!-- 상품 3 -->
+        <div class="product-card product-card-custom">
+          <img
+            src="/w3.jpg"
+            alt="헤네시 VSOP 700ml"
+            class="product-image product-image-square"
+          />
+          <h3 class="product-title">헤네시 VSOP 700ml</h3>
+          <div class="product-origin-price">130,000원</div>
+          <div class="product-sale-price">
+            <span class="product-sale">33%</span>
+            <span class="product-price">87,300원</span>
+          </div>
+          <div class="product-rating">
+            <span class="star">★</span>
+            <span class="score">5.0</span>
+            <span class="review-count">(27)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="src/firebase-cart-login.js"></script>
+    <script type="module" src="src/recommend-black.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const goWhisky = document.getElementById("go-whisky");
+        if (goWhisky) {
+          goWhisky.addEventListener("click", function () {
+            window.location.href = "whisky-black.html";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
