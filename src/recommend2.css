@@ -1,0 +1,121 @@
+/* 광고 배너 영역 */
+.ad-banner {
+  width: 100%;
+  background: #ffe5c2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0 32px 0;
+  min-height: 120px;
+  overflow: hidden;
+}
+.ad-image {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+}
+/* 광고 배너 스타일 */
+.ad-banner {
+  width: 100%;
+  height: 100px;
+  background: #ffe5c2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0 10px 0;
+  font-size: 1.2em;
+  color: #fd6500;
+  font-weight: 700;
+}
+/* 오늘 추천하는 곳 제목 스타일 */
+.recommend-title.recommend-today {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+/* 추천 카테고리 주황색, 굵기 700 */
+.category-bar .category.selected {
+  color: #fd6500;
+  font-weight: 700;
+}
+/* 위스키 카테고리 검정, 굵기 500 */
+.category-bar .category.whisky {
+  color: #222;
+  font-weight: 500;
+}
+/* 카테고리 호버 시 주황색 */
+.category-bar .category:hover {
+  color: #fd6500;
+  background: none;
+}
+
+/* 추천 상품 리스트 페이지 전용 스타일 */
+.product-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  justify-items: center;
+}
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 210px;
+  min-width: 0;
+}
+.product-card .product-image {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-card h3 {
+  font-size: 1em;
+  margin: 8px 0 2px 0;
+  color: #1a1a1a;
+  text-align: left;
+  font-weight: 600;
+}
+.product-card .price {
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #fd6500;
+  margin-bottom: 6px;
+  text-align: left;
+}
+.product-card .view-detail-btn {
+  width: 100%;
+  padding: 7px;
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff7b0f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.product-card .view-detail-btn:not(:disabled):hover {
+  background-color: #ec5711;
+  box-shadow: 0 2px 8px rgba(255, 123, 15, 0.15);
+}
+.recommend-title {
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  text-align: left;
+  color: #333;
+  font-weight: 700;
+  padding-left: 2px;
+}
