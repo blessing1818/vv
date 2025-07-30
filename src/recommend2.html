@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>추천 상품 리스트</title>
+    <link rel="stylesheet" href="./style2.css" />
+    <link rel="stylesheet" href="./recommend.css" />
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="topbar">
+        <div class="topbar-main">
+          <span class="logo">마셔</span>
+          <button class="cart-btn">
+            <span class="cart-icon"
+              ><img
+                src="/cart.png"
+                alt="카트"
+                style="height: 24px; vertical-align: middle"
+            /></span>
+            <span class="cart-badge">0</span>
+          </button>
+        </div>
+        <div class="category-bar">
+          <span class="category selected">추천</span>
+          <span class="category" style="color: #fd6500">위스키</span>
+          <span class="category">해외직구</span>
+          <span class="category">와인</span>
+          <span class="category">사케</span>
+          <span class="category">리큐르</span>
+          <span class="category">기타 주류</span>
+        </div>
+      </div>
+      <h2 class="recommend-title">추천 상품</h2>
+      <div class="product-list">
+        <!-- 추천 상품 카드 예시 -->
+        <div class="product-card">
+          <img src="/w1.jpg" alt="추천 상품1" class="product-image" />
+          <h3>추천 상품1</h3>
+          <p class="price">₩99,000</p>
+          <button class="view-detail-btn">상세보기</button>
+        </div>
+        <div class="product-card">
+          <img src="/w2.jpg" alt="추천 상품2" class="product-image" />
+          <h3>추천 상품2</h3>
+          <p class="price">₩89,000</p>
+          <button class="view-detail-btn">상세보기</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./firebase-cart-login.js"></script>
+    <script type="module" src="./recommend.js"></script>
+  </body>
+</html>
