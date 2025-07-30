@@ -1,27 +1,100 @@
-/* 광고 배너 영역 */
-.ad-banner {
-  width: 100%;
-  background: #ffe5c2;
-  border-radius: 8px;
+/* 상단바 flex 적용 */
+.topbar {
+  display: flex;
+  flex-direction: column;
+}
+.topbar-main {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 18px 0 32px 0;
-  min-height: 120px;
-  overflow: hidden;
+  justify-content: space-between;
 }
-.ad-image {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
+.product-list-horizontal {
+  /* flex 미적용, 가로 스크롤은 white-space로 */
+  white-space: nowrap;
+  overflow-x: auto;
+  gap: 18px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  margin-left: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ffd7a0 #fff6e5;
+}
+/* 오늘의 추천 카드 커스텀 스타일 */
+.product-card-custom {
+  display: inline-block;
+  /* align-items 미적용 - 상품 카드에 중앙 정렬 없음 */
+}
+.product-image-square {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
   border-radius: 8px;
-  display: block;
-  object-fit: contain;
+  margin-bottom: 6px;
 }
-/* 광고 배너 스타일 */
-.ad-banner {
+.product-title {
+  font-size: 0.98em;
+  margin-bottom: 2px;
+  color: #222;
+  font-weight: 600;
+  text-align: left;
   width: 100%;
-  height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-origin-price {
+  font-size: 0.92em;
+  color: #888;
+  text-decoration: line-through;
+  margin-bottom: 1px;
+  text-align: left;
+}
+.product-sale-price {
+  font-size: 0.95em;
+  color: #fd6500;
+  font-weight: 700;
+  margin-bottom: 1px;
+  text-align: left;
+}
+.product-sale {
+  font-size: 0.95em;
+  color: #fd6500;
+  font-weight: 700;
+}
+.product-price {
+  margin-left: 6px;
+  color: #222;
+  font-weight: 700;
+}
+.product-rating {
+  font-size: 0.92em;
+  color: #fd6500;
+  /* display: flex 제거 - 상품 리스트에 flex 미적용 */
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 1px;
+  text-align: left;
+}
+.star {
+  font-size: 1em;
+  color: #fd6500;
+}
+.score {
+  font-weight: 600;
+  color: #222;
+}
+.review-count {
+  color: #888;
+}
+/* 추천 제목 왼쪽 정렬 */
+.recommend-title {
+  text-align: left;
+}
+/* 광고 배너 영역 */
+.ad-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
   background: #ffe5c2;
   border-radius: 8px;
   display: flex;
@@ -31,6 +104,16 @@
   font-size: 1.2em;
   color: #fd6500;
   font-weight: 700;
+  overflow: hidden;
+}
+.ad-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
 }
 /* 오늘 추천하는 곳 제목 스타일 */
 .recommend-title.recommend-today {
@@ -66,16 +149,14 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  width: 100%;
-  max-width: 210px;
+  width: 90%;
+  max-width: 170px;
   min-width: 0;
 }
 .product-card .product-image {
-  width: 120px;
+  width: 160px;
   height: 160px;
   object-fit: cover;
   border-radius: 8px;
@@ -118,4 +199,9 @@
   color: #333;
   font-weight: 700;
   padding-left: 2px;
+}
+
+/* product-container 내부 요소가 영역을 침범하지 않도록 */
+.product-container {
+  overflow: hidden;
 }
