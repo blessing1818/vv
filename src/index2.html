@@ -114,39 +114,6 @@
       </div>
       <script type="module" src="./main.js"></script>
       <script type="module" src="./firebase-cart-login.js"></script>
-      <script type="module">
-        import { initializeApp } from "firebase/app";
-        import {
-          getFirestore,
-          doc,
-          getDoc,
-          setDoc,
-          updateDoc,
-        } from "firebase/firestore";
-        import firebaseConfig from "./whiskey.json";
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        document.addEventListener("DOMContentLoaded", function () {
-          const purchaseBtn = document.querySelector(".add-to-cart-btn");
-          if (purchaseBtn) {
-            purchaseBtn.addEventListener("click", async function () {
-              try {
-                const docRef = doc(db, "orders2", "pickup");
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                  const current = docSnap.data().purchaseCount || 0;
-                  await updateDoc(docRef, { purchaseCount: current + 1 });
-                } else {
-                  await setDoc(docRef, { purchaseCount: 1 });
-                }
-                alert("픽업 주문이 정상적으로 처리되었습니다!");
-              } catch (e) {
-                alert("주문 처리 중 오류가 발생했습니다.");
-              }
-            });
-          }
-        });
-      </script>
 
       <script>
         // 추천/위스키 클릭 시 페이지 이동
