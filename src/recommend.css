@@ -1,3 +1,8 @@
+/* 카테고리 호버 시 글자색만 변경 */
+.category-bar .category:not(.selected):hover {
+  color: #fd6500;
+  background: none;
+}
 /* 추천 상품 리스트 페이지 전용 스타일 */
 .product-list {
   width: 100%;
@@ -11,21 +16,23 @@
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
   width: 100%;
   max-width: 210px;
   min-width: 0;
 }
 .product-card .product-image {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
 }
 .product-card h3 {
   font-size: 1em;
-  margin: 10px 0px 2px 0;
+  margin: 8px 0 2px 0;
   color: #1a1a1a;
   text-align: left;
   font-weight: 600;
@@ -33,14 +40,12 @@
 .product-card .price {
   font-size: 0.95em;
   font-weight: bold;
-  color: #5e5e5e;
-  margin-bottom: 20px;
-  margin-top: 0px;
+  color: #fd6500;
+  margin-bottom: 6px;
   text-align: left;
 }
 .product-card .view-detail-btn {
-  width: 90%;
-  height: 38px;
+  width: 100%;
   padding: 7px;
   font-size: 0.95em;
   font-weight: bold;
