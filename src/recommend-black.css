@@ -19,6 +19,9 @@
   margin-left: 0;
   scrollbar-width: thin;
   scrollbar-color: #ccb295 #fff9ed;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
 }
 /* 오늘의 추천 카드 커스텀 스타일 */
 .product-card-custom {
