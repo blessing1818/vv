@@ -9,12 +9,12 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, 'src/index2.html'),
-        nested: resolve(__dirname, 'src/index3.html'),
-        nested: resolve(__dirname, 'src/recommend-black.html'),
-        nested: resolve(__dirname, 'src/recommend.html'),
-        nested: resolve(__dirname, 'src/recommend2.html'),
-        nested: resolve(__dirname, 'src/whisky-black.html')
+        index2: resolve(__dirname, "src/index2.html"),
+        index3: resolve(__dirname, "src/index3.html"),
+        recommendBlack: resolve(__dirname, "src/recommend-black.html"),
+        recommend: resolve(__dirname, "src/recommend.html"),
+        recommend2: resolve(__dirname, "src/recommend2.html"),
+        whiskyBlack: resolve(__dirname, "src/whisky-black.html"),
       },
     },
   },
