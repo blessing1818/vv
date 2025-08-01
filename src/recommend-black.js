@@ -6,7 +6,7 @@ import {
   setDoc,
   updateDoc,
 } from "firebase/firestore";
-import firebaseConfig from "./whiskey.json";
+import firebaseConfig from "../whiskey.json";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
