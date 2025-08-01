@@ -124,11 +124,11 @@
 /* 추천 카테고리 주황색, 굵기 700 */
 .category-bar .category.selected {
   color: #fd6500 !important;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 .category-bar .category.whisky {
   color: #222 !important;
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 /* 위스키 카테고리 검정, 굵기 500 */
 .category-bar .category.whisky {
