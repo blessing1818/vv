@@ -131,7 +131,7 @@
 }
 /* 위스키 카테고리 검정, 굵기 500 */
 .category-bar .category.whisky {
-  color: #222;
+  color: #222 !important;
   font-weight: 500;
 }
 /* 카테고리 호버 시 주황색 */
